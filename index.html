@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Time Tracker</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <div id="settings-section">
+            <div class="btn btn-icon btn-setting">
+                <img class="counterp" src="https://views.igorkowalczyk.dev/api/badge/theSwapnilSaste-testTimer?style=flat&color=0e0c09&labelColor=0e0c09" alt="GitHub Views">
+            </div>
+            <button id="settings-btn" class="btn btn-icon btn-setting" title="Settings" aria-label="Settings">
+                <i class="fa-solid fa-user-gear"></i>
+            </button>
+            <button id="dark-mode-toggle" class="btn btn-icon btn-setting" title="Dark Mode" aria-label="Dark Mode" disabled="disabled">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </button>
+            <button id="history-btn" class="btn btn-icon btn-setting" title="View Past History" aria-label="Past History">
+                <i class="fa-solid fa-stopwatch"></i>
+            </button>
+        </div>
+        <div>
+            <div id="settings-menu" style="display:none;">
+                <h4>Timer Settings</h4>
+                <label>
+                    Default time per question (seconds):
+                    <input type="number" id="default-time-input" min="1">
+                </label>
+                <label>
+                    Warning time (seconds before end):
+                    <input type="number" id="warning-time-input" min="1">
+                </label>
+                <button id="save-settings-btn" class="btn btn-green">Save</button>
+            </div>
+        </div>
+        <h2 id="question-label">Question #<span id="question-number">1</span></h2>
+        <div id="timer-display">
+            <span id="timer-minutes">00</span>
+            <span class="flip-separator">:</span>
+            <span id="timer-seconds">00</span>
+        </div>
+        <div id="timer-controls">
+            <button id="skip-btn" class="btn btn-red" title="Skip"><i class="fa-solid fa-xmark"></i></button>
+            <button id="next-btn" class="btn btn-green" title="Next"><i class="fa-solid fa-check"></i></button>
+            <button id="reset-btn" class="btn btn-gray" title="Reset"><i class="fa-solid fa-clock-rotate-left"></i></button>
+            <button id="mark-btn" class="btn btn-violet" title="Mark"><i class="fa-regular fa-bookmark"></i></button>
+        </div>
+        <div id="action-buttons">
+            <button id="resume-btn" class="btn green d-flex align-items-center justify-content-center"><i class="fas fa-play me-2"></i> Start Test</button>
+            <button id="end-test" class="btn red"><i class="fas fa-stop"></i> End Test</button>
+        </div>
+        <div id="log-container">
+            <h3><span style="margin-right:8px;">🗓️</span>Question Log</h3>
+            <table id="results-table" class="neu-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Time</th>
+                        <th>Target</th>
+                        <th>Result</th>
+                        <th>Marked</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody id="results-body"></tbody>
+            </table>
+        </div>
+        <div id="summary-export-container"></div>
+        <div id="modal-blur-overlay"></div>
+        <div id="history-modal">
+            <div class="history-modal-header">
+                <h3>
+                    <i class="fa-solid fa-calendar"></i> Past Test History
+                </h3>
+                <button id="close-history-btn" class="btn btn-gray btn-icon">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div id="history-list"></div>
+        </div>
+    </div>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
