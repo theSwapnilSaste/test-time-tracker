@@ -47,24 +47,6 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
-body.dark {
-    background: #23272f;
-}
-
-body.dark .nums {
-    background: #23272f;
-    box-shadow: 8px 8px 24px #181a1f, -8px -8px 24px #2d3140;
-    border-top: 1px solid #2d3140;
-}
-
-body.dark .num {
-    color: #e3e6ec;
-}
-
-body.dark .flip-separator {
-    color: #2d3140;
-}
-
 /* Warning color for timer digits only */
 /* .nums.warning .num {
     color: #d32f2f !important;
@@ -697,81 +679,6 @@ body.dark .flip-separator {
     justify-content: space-between;
     margin: 0;
     gap: 8px;
-}
-
-@media (prefers-color-scheme: dark) {
-    body {
-        background: #23272f;
-        color: #e3e6ec;
-    }
-    #app,
-    #timer-display,
-    #settings-menu,
-    #results-table {
-        background: #23272f;
-        box-shadow: 8px 8px 24px #181a1f, -8px -8px 24px #2d3140;
-    }
-    #timer-controls button,
-    #action-buttons .green,
-    #action-buttons .red,
-    #action-buttons .yellow,
-    #settings-btn,
-    #settings-menu input,
-    #settings-menu button {
-        background: #23272f;
-        color: #e3e6ec;
-        box-shadow: 4px 4px 12px #181a1f, -4px -4px 12px #2d3140;
-    }
-    #results-table th {
-        background: #23272f;
-    }
-    .result-fast {
-        color: #7fffd4;
-    }
-    .result-ontime {
-        color: #ffd580;
-    }
-    .result-slow {
-        color: #ff7f7f;
-    }
-    #timer-display.warning {
-        background: #d32f2f;
-        color: #fff;
-        box-shadow: 8px 8px 24px #181a1f, -8px -8px 24px #2d3140;
-    }
-    #timer-display.warning span {
-        color: #ff7f7f;
-    }
-    body.warning {
-        background: #23272f;
-        color: #e3e6ec;
-    }
-    .flip-card {
-        background: #23272f;
-        color: #e3e6ec;
-        box-shadow: 8px 8px 24px #181a1f, -8px -8px 24px #2d3140;
-    }
-    .flip-separator {
-        color: #2d3140;
-    }
-    #timer-display.warning .flip-card,
-    #timer-display.warning .flip-separator {
-        color: #ff7f7f;
-    }
-    .summary-container {
-        background: #23272f;
-        box-shadow: 8px 8px 24px #181a1f, -8px -8px 24px #2d3140;
-    }
-    .summary-stat {
-        background: #23272f;
-        box-shadow: 4px 4px 12px #181a1f, -4px -4px 12px #2d3140;
-    }
-    .summary-label {
-        color: #aaa;
-    }
-    .summary-value {
-        color: #e3e6ec;
-    }
 }
 
  .neumorphic-container-badge {
